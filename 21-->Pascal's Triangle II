@@ -1,0 +1,14 @@
+class Solution {
+    public List<Integer> getRow(int rowIndex) {
+        List<Integer> pascal=new ArrayList<>();
+        pascal.add(1);
+        int mul=rowIndex;
+        long res=1l;
+        for(int i=1;i<=rowIndex;i++){
+            res=res*mul/i;
+            mul--;
+            pascal.add((int)res);
+        }
+        return pascal;
+    }
+}
